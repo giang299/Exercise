@@ -10,7 +10,7 @@ int sumOfSquare(int x){
       
 }
 //Loops
-nt sumOfSquare(int x){
+int sumOfSquare(int x){
     int sum=0 ;
  for (int i = 1; i <= x; i++)
  {
