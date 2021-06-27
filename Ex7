@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+//Loops
+double sumOfFraction1(double x){
+    double Sum =0 ;
+    for (double i = 1; i <=x; i+=1) {Sum+=(i/(i+1));}
+    return Sum ; 
+}
+//Recursive Function
+double sumOfFraction(double x){
+   if(x<1) return 0 ;
+   return (x/(x+1)) + sumOfFraction(x-1);
+}
+int main(){
+    double x = 20  ;
+    cout<<"Funtion 1 :"<<sumOfFraction1(x)<<endl;
+    cout<<"Funtion  :"<<sumOfFraction(x)<<endl;
+    return 0;
+}
