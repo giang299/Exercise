@@ -1,0 +1,30 @@
+
+#include <iostream>
+int sumOfSquare(int x){
+ //recursive Function
+   if (x==1)
+   {
+        return 1;   
+   }
+   return  x*x+sumOfSquare(x-1);
+      
+}
+//Loops
+nt sumOfSquare(int x){
+    int sum=0 ;
+ for (int i = 1; i <= x; i++)
+ {
+     sum+= i*i;
+ }
+ return sum;
+      
+}
+
+
+//Main test
+int main(){
+    int x ;
+    std::cin>>x;
+    std::cout<<sumOfSquare(x);
+    return 0;
+}
