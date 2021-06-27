@@ -1,0 +1,25 @@
+#include <isostream>
+//Recursive Function
+double sumOfFraction(double x){
+    if(x==1) return 1 ;
+   return (1/x) + sumOfFraction(x-1);
+};
+
+ //Loops
+ double sumOfFraction(double x){
+    double Sum =0 ;
+    for (double i = 1; i <= x; i++)
+    {
+        Sum+=(1/i);
+    }
+    return Sum ; 
+};
+
+ 
+ 
+int main(){
+    double x ;
+    std::cin>>x;
+    std::cout<<sumOfFraction(x);
+    return 0;
+}
