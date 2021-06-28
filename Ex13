@@ -1,0 +1,16 @@
+#include <iostream>
+double Total(double x)
+{   double Total=0;
+    double  mutilication=1 ;
+    for (double i = 1; i <= x; i++)
+    {   mutilication*=i;
+        Total+=mutilication;
+    }
+    return Total ; 
+}
+int main()
+{
+    double x=5 ;
+    std::cout<<" Funtion  :"<<Total(x)<<std::endl;
+    return 0;
+}
