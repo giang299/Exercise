@@ -1,0 +1,55 @@
+#include <iostream> 
+#include <vector>
+
+int Power(int x , int n){
+    int mutilication=1;
+    while (n!=0)
+    {
+        if (n&1)
+        {
+            mutilication*=x;
+        }
+        x*=x;
+        n=n>>1; 
+         
+    }
+    
+    return mutilication;
+}
+int Power2(int x, int n){
+    if (n==1)
+    {
+       return x;
+    }
+    
+    return Power(x,n)+Power2(x,n-1);
+}
+int Power2_1(int x,int n){
+   int total=0;
+   int muti=1;
+   for (int i = 0; i < n; i++)
+   {
+       muti*=x;
+       total+=muti;
+   }
+   return total; 
+}
+int power2_2(int x,int n){
+    int total=0;
+    int mutil=1;
+    while (n--)
+    {
+        mutil*=x;
+        total+=mutil;
+    }
+    return total;
+}
+
+int main(){
+    //std::cout<<Power(5,3);
+    std::cout<<Power2(5,3)<<std::endl;
+    std::cout<<Power2_1(5,3)<<std::endl;
+    std::cout<<power2_2(5,3)<<std::endl;
+
+
+}
